@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="title">DOM Elements</h1>
+    <p id="parrafo">Hello World!</p>
+
+
+    <script src="https://code.jquery-2.1.0.js"></script>
+    <script>
+        let headingElement = document.getElementById("title")
+        console.log(headingElement) //Trae el objeto cuyo ID es "title" y lo muestra en código HTML
+        console.log(headingElement.innerHTML) //Trae el contenido del objeto cuyo ID es "title"
+        //Vamos a modificar el contenido de "headingElement"
+        let nuevoTitulo = prompt("Ingrese un nuevo título: ")
+        headingElement.innerHTML = nuevoTitulo
+        $("#parrafo").append("<p>Hola a todo el mundo</p>")
+        let parrafoElement = document.getElementById("parrafo")
+        console.log(parrafoElement)
+        console.log(parrafoElement.innerHTML)
+    </script>
+</body>
+</html>
